@@ -50,9 +50,6 @@ Script Game Lexer/
 - **Illegal Character**: Indicates an unsupported or unexpected character.
 - **Unmatched Quotes**: Ensures all string literals have both opening and closing quotes.
 
----
 
-## License
-This project is licensed under the MIT License.
 
 

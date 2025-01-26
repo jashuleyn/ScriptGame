@@ -1,0 +1,57 @@
+TYPE                           VALUE
+--------------------------------
+KEYWORD                       num
+IDENTIFIER                    x
+OPERATOR                      =
+num INT                       0
+DELIMITER                     ,
+IDENTIFIER                    y
+DELIMITER                     ;
+KEYWORD                       mingle
+DELIMITER                     (
+IDENTIFIER                    x
+OPERATOR                      =
+num INT                       0
+DELIMITER                     ;
+IDENTIFIER                    x
+OPERATOR                      <
+OPERATOR                      =
+num INT                       5
+DELIMITER                     ;
+IDENTIFIER                    x
+OPERATOR                      +
+OPERATOR                      +
+DELIMITER                     )
+DELIMITER                     {
+KEYWORD                       reveal
+DELIMITER                     (
+IDENTIFIER                    x
+OPERATOR                      +
+text STRING                   ". I played this "
+DELIMITER                     )
+DELIMITER                     ;
+KEYWORD                       mingle
+DELIMITER                     (
+IDENTIFIER                    y
+OPERATOR                      =
+num INT                       3
+DELIMITER                     ;
+IDENTIFIER                    y
+OPERATOR                      >
+num INT                       0
+DELIMITER                     ;
+IDENTIFIER                    y
+OPERATOR                      -
+OPERATOR                      -
+DELIMITER                     )
+DELIMITER                     {
+KEYWORD                       reveal
+DELIMITER                     (
+IDENTIFIER                    y
+OPERATOR                      +
+text STRING                   " game before "
+DELIMITER                     )
+DELIMITER                     ;
+DELIMITER                     }
+DELIMITER                     }
+EOF                           ;

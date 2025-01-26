@@ -1,0 +1,21 @@
+num x = 0, y;
+mingle (x = 0; x <= 5; x++) {
+	reveal(x + ". I played this ");
+mingle (y = 3; y > 0; y--) {  
+reveal(y + " game before "); 
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

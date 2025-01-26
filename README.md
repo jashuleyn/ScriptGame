@@ -44,8 +44,6 @@ Script Game Lexer/
 ---
 
 ## Troubleshooting
-### UnicodeDecodeError
-If you encounter a `UnicodeDecodeError`, ensure that `source.sg` uses UTF-8 encoding. Save the file with UTF-8 encoding in your text editor or IDE.
 
 ### Common Errors
 - **Repetition Error**: Triggered when an operator or delimiter is repeated unnecessarily (e.g., `/////`, `+++++`).

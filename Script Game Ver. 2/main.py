@@ -10,17 +10,28 @@ def main():
 
     # Write the results to symbol_table.sg
     with open('symbol_table.sg', 'w') as symbol_table:
+        symbol_table.write(f"TYPE{' ' * 40}VALUE\n")
+        symbol_table.write(f"{'-' * 55}\n")
+
         if error:
-            symbol_table.write(f"TYPE{' ' * 27}VALUE\n")
-            symbol_table.write(f"{'-' * 32}\n")
-            symbol_table.write(f"ERROR{' ' * 25}{error.as_string()}\n")
+            # Log lexer-level errors
+            symbol_table.write(f"ERROR{' ' * 33}{error.as_string()}\n")
+            print(f"TOKEN (type: ERROR, lexeme: {error.as_string()}, literal: null")
         else:
-            symbol_table.write(f"TYPE{' ' * 27}VALUE\n")
-            symbol_table.write(f"{'-' * 32}\n")
             for token in tokens:
-                type_spacing = ' ' * (30 - len(token.type))  # Adjust spacing for alignment
-                value = token.value if token.value is not None else 'None'
-                symbol_table.write(f"{token.type}{type_spacing}{value}\n")
+                if hasattr(token, "type") and hasattr(token, "value"):
+                    # Process valid tokens
+                    type_spacing = ' ' * (40 - len(token.type))  # Adjust spacing for alignment
+                    value = token.value if token.value is not None else 'None'
+                    symbol_table.write(f"{token.type}{type_spacing}{value}\n")
+
+                    # Print token in the requested format to the terminal
+                    print(f"TOKEN (type: {token.type}, lexeme: {value}, literal: null)")
+
+                else:
+                    # Handle unexpected errors or invalid tokens
+                    symbol_table.write(f"ERROR{' ' * 33}Invalid token or error encountered: {str(token)}\n")
+                    print(f"TOKEN (type: ERROR, lexeme: Invalid token, literal: null")
 
     print("Lexical analysis complete. Results saved to symbol_table.sg.")
 

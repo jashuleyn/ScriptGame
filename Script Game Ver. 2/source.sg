@@ -1,0 +1,10 @@
+num value = 5;
+value++;  // Increment by 1
+reveal("Incremented Value: " + value);
+
+value--;  // Decrement by 1
+reveal("Decremented Value: " + value);
+
+num negative = -value;
+reveal("Negative Value: " + negative);
+

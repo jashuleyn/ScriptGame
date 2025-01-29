@@ -1,0 +1,43 @@
+TYPE                                        VALUE
+-------------------------------------------------------
+KEYWORD                                 num
+IDENTIFIER                              value
+ASSIGNMENTOPERATOR_EQUAL                =
+num INT                                 5
+DELIMITER_SEMICOLON                     ;
+IDENTIFIER                              value
+UNARYOPERATOR_INCREMENT                 ++
+DELIMITER_SEMICOLON                     ;
+SINGLE COMMENT                          // Increment by 1
+KEYWORD                                 reveal
+DELIMITER_LPAREN                        (
+text STRING                             "Incremented Value: "
+ARITHMETICOPERATOR_ADD                  +
+IDENTIFIER                              value
+DELIMITER_RPAREN                        )
+DELIMITER_SEMICOLON                     ;
+IDENTIFIER                              value
+UNARYOPERATOR_DECREMENT                 --
+DELIMITER_SEMICOLON                     ;
+SINGLE COMMENT                          // Decrement by 1
+KEYWORD                                 reveal
+DELIMITER_LPAREN                        (
+text STRING                             "Decremented Value: "
+ARITHMETICOPERATOR_ADD                  +
+IDENTIFIER                              value
+DELIMITER_RPAREN                        )
+DELIMITER_SEMICOLON                     ;
+KEYWORD                                 num
+IDENTIFIER                              negative
+ASSIGNMENTOPERATOR_EQUAL                =
+ARITHMETICOPERATOR_MINUS                -
+IDENTIFIER                              value
+DELIMITER_SEMICOLON                     ;
+KEYWORD                                 reveal
+DELIMITER_LPAREN                        (
+text STRING                             "Negative Value: "
+ARITHMETICOPERATOR_ADD                  +
+IDENTIFIER                              negative
+DELIMITER_RPAREN                        )
+DELIMITER_SEMICOLON                     ;
+EOF                                     ;
